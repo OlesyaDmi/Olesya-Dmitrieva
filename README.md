@@ -1,21 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for
+# Simple Banking App
 
-app = Flask(__name__)
+This project is a simple banking application that allows users to create accounts and view balances. It uses SQLite for data storage.
 
-# Dummy data for demonstration
-posts = [
-    {"title": "First Post", "content": "This is the first post content."},
-    {"title": "Second Post", "content": "This is the second post content."}
-]
+## Installation
 
-@app.route('/')
-def index():
-    return render_template('index.html', posts=posts)
-
-@app.route('/post/<int:post_id>')
-def post(post_id):
-    post = posts[post_id]
-    return render_template('post.html', post=post)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/simple-banking-app.git
